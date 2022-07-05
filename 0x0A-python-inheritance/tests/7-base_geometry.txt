@@ -1,122 +1,119 @@
 The ``7-base_geometry`` module
-==============================
+============================
 
 Using ``BaseGeometry``
-----------------------
+---------------------
 
-Importing class from the module:
+Import function from module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-
-Trying to print the area
+Correct Class Type test:
     >>> bg = BaseGeometry()
+    >>> type(bg) == BaseGeometry
+    True
+
+
+area() instance method
+----------------------
+area method is an instance method:
+    >>> type(BaseGeometry.__dict__['area'])
+    <class 'function'>
+
+area method called via class with no args:
+    >>> bg.__class__.area()
+    Traceback (most recent call last):
+    TypeError: area() missing 1 required positional argument: 'self'
+
+area method args test (1 arg):
+    >>> bg.area(10)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 2 were given
+
+area method normal test:
     >>> bg.area()
     Traceback (most recent call last):
-    	      ...
     Exception: area() is not implemented
 
 
-Trying to pass a non-integer argument
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("name", "5")
+integer_validator() instance method
+-----------------------------------
+integer_validator is an instance method:
+    >>> type(BaseGeometry.__dict__['integer_validator'])
+    <class 'function'>
+
+integer_validator method called via class with no args:
+    >>> bg.__class__.integer_validator()
     Traceback (most recent call last):
-    	      ...
-    TypeError: name must be an integer
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
 
-
-Trying to pass a boolean value
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("name", True)
-    Traceback (most recent call last):
-    	      ...
-    TypeError: name must be an integer
-
-
-Trying to pass a negative value
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("name", -5)
-    Traceback (most recent call last):
-    	      ...
-    ValueError: name must be greater than 0
-
-
-Trying to pass a zero value
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("name", 0)
-    Traceback (most recent call last):
-    	      ...
-    ValueError: name must be greater than 0
-
-
-Passing a positive value
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("name", 5)
-
-
-Passing one argument to integer_validator
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("name")
-    Traceback (most recent call last):
-    	      ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-Integer_validator with no arguments
-    >>> bg = BaseGeometry()
+integer_validator method arg test (0 args):
     >>> bg.integer_validator()
     Traceback (most recent call last):
-    	      ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-
-Passing three arguments to integer_validator
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("name", 1, 2)
+    
+integer_validator method arg test (3 args):
+    >>> bg.integer_validator(1, 1, 1)
     Traceback (most recent call last):
-    	      ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
-
-Passing one argument to area method
-    >>> bg = BaseGeometry()
-    >>> bg.area(5)
+integer_validator method float.0 value:
+    >>> bg.integer_validator("foo", 3.0)
     Traceback (most recent call last):
-    	      ...
-    TypeError: area() takes 1 positional argument but 2 were given
+    TypeError: foo must be an integer
 
-Passing two arguments to area method
-    >>> bg = BaseGeometry()
-    >>> bg.area(5, 5)
+integer_validator method float.x value:
+    >>> bg.integer_validator("arg", 3.14)
     Traceback (most recent call last):
-    	      ...
-    TypeError: area() takes 1 positional argument but 3 were given
+    TypeError: arg must be an integer
 
-Passing tuple to method
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("age", (4,))
+integer_validator method string value:
+    >>> bg.integer_validator("Bar", "bar")
     Traceback (most recent call last):
-    	      ...
-    TypeError: age must be an integer
+    TypeError: Bar must be an integer
 
-
-Passing list to method
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("age", [3])
+integer_validator method bool value:
+    >>> bg.integer_validator("zar", True)
     Traceback (most recent call last):
-    	      ...
-    TypeError: age must be an integer
+    TypeError: zar must be an integer
 
-
-Passing dict to method
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("age", {3, 4})
+integer_validator method list value:
+    >>> bg.integer_validator("a", [1])
     Traceback (most recent call last):
-              ...
-    TypeError: age must be an integer
+    TypeError: a must be an integer
 
-
-Passing None to method
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("age", None)
+integer_validator method None value:
+    >>> bg.integer_validator("foo", None)
     Traceback (most recent call last):
-              ...
-    TypeError: age must be an integer
+    TypeError: foo must be an integer
+
+integer_validator method 0 value:
+    >>> bg.integer_validator("key", 0)
+    Traceback (most recent call last):
+    ValueError: key must be greater than 0
+
+integer_validator method negative value:
+    >>> bg.integer_validator("key", -1000)
+    Traceback (most recent call last):
+    ValueError: key must be greater than 0
+
+integer_validator method ok value:
+    >>> bg.integer_validator("key", 98)
+    
+integer_validator method ok value 2:
+    >>> bg.integer_validator("key", 1)
+
+integer_validator method empty string:
+    >>> bg.integer_validator("", 1)
+
+integer_validator method empty string:
+    >>> bg.integer_validator(None, 1)
+
+integer_validator method tuple:
+    >>> bg.integer_validator("Foo", (1, 2))
+    Traceback (most recent call last):
+    TypeError: Foo must be an integer
+
+integer_validator method dic:
+    >>> bg.integer_validator("Foo", {1, 2})
+    Traceback (most recent call last):
+    TypeError: Foo must be an integer
