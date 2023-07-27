@@ -20,4 +20,4 @@ The table below gives the name of each project and their description.
 
 | Name | Description |
 | ---- | ----------- |
-| [0x00-python-hello_world](https://github.com/Pascalchinedu/alx-higher_level_programming/tree/main/0x00-python-hello_world) | A project that orints hello world on the screen |
+| [0x00-python-hello_world](https://github.com/Pascalchinedu/alx-higher_level_programming/tree/main/0x00-python-hello_world) | A project that prints hello world on the screen |
