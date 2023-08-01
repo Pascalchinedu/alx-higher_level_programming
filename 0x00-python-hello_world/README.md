@@ -43,4 +43,16 @@ The table below gives the name of each project and their description.
 | | You are not allowed to use any loops or conditional statements. |
 | | You have to use the variables str1 and str2 in your new line of code |
 | |Your program should be exactly 5 lines long |
+| [7-edges.py](https://github.com/Pascalchinedu/alx-higher_level_programming/blob/main/0x00-python-hello_world/7-edges.py)| A script that completes the [source code](https://github.com/alx-tools/0x00.py/blob/master/7-edges.py) to print the first three word, last two word, middle word |
+| | You are not allowed to use any loops or conditional statements |
+| | Your program should be exactly 8 lines long |
+| | word_first_3 should contain the first 3 letters of the variable word |
+| | word_last_2 should contain the last 2 letters of the variable word |
+| | middle_word should contain the value of the variable word without the first and last letters |
+| [8-concat_edges.py](https://github.com/Pascalchinedu/alx-higher_level_programming/blob/main/0x00-python-hello_world/8-concat_edges.py)| A script that completes the [source code](https://github.com/alx-tools/0x00.py/blob/master/8-concat_edges.py) to print object-oriented programming with python, followed by a new line. |
+| | You are not allowed to use any loops or conditional statements |
+| | Your program should be exactly 5 lines long |
+| | You are not allowed to create new variables |
+| | You are not allowed to use string literals |
+| [9-easter_egg.py](https://github.com/Pascalchinedu/alx-higher_level_programming/blob/main/0x00-python-hello_world/9-easter_egg.py)| A python script that prints "The Zen of Python", by TimPeters, followed by a new line |
 
