@@ -21,3 +21,4 @@ The table below gives the name of each project and their description.
 | Name | Description |
 | ---- | ----------- |
 | [0x00-python-hello_world](https://github.com/Pascalchinedu/alx-higher_level_programming/tree/main/0x00-python-hello_world) | A project that prints different strings on the screen |
+| [0x01-python-if_else_loops_functions](https://github.com/Pascalchinedu/alx-higher_level_programming/tree/main/0x01-python-if_else_loops_functions) | A reopository that contains tasks that solves problems on if, else, loops and function |
