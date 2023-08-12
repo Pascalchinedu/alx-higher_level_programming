@@ -11,7 +11,7 @@ Below are the resources used in accomplishing this tasks.
 - [Learn to Program 2: Looping](https://intranet.alxswe.com/rltoken/ElQgZYNHrLI7kV_ysEB1hQ)
 - [Pycodestyle = Style Guide for Python Code](https://intranet.alxswe.com/rltoken/TuTTnEg_Rwn8U1g3PEsZmA)
 
-  ## Table of Content
+# Table of Content
 The table below gives the name of each project and their description.
   | Name    | Description |
 | -------- | ----------- |
