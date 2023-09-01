@@ -22,3 +22,5 @@ The table below gives the name of each project and their description.
 | ---- | ----------- |
 | [0x00-python-hello_world](https://github.com/Pascalchinedu/alx-higher_level_programming/tree/main/0x00-python-hello_world) | A project that prints different strings on the screen |
 | [0x01-python-if_else_loops_functions](https://github.com/Pascalchinedu/alx-higher_level_programming/tree/main/0x01-python-if_else_loops_functions) | A directory that contains tasks that solves problems on if, else, loops and function |
+| [0x01-python-if_else_loops_functions](https://github.com/Pascalchinedu/alx-higher_level_programming/tree/main/0x02-python-import_modules) |This project, part of the ALX Higher-Level Programming curriculum, consists of Python tasks covering module imports, command line argument handling, and basic scripting. It includes tasks such as importing functions from files, handling command line arguments, performing calculations, and more. Each task is designed to reinforce key Python programming concepts and best practices.
+For detailed instructions and code examples, please refer to the respective task descriptions in the project directory. |
