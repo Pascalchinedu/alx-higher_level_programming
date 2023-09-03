@@ -1,18 +1,27 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
+'''
+    A program that prints the number of and the list of its arguments
+
+'''
+if __name__ == '__main__':
     import sys
-    i = len(sys.argv) - 1
 
-    if i == 0:
-        print("{} arguments.".format(i))
-    elif i == 1:
-        print("{} argument:".format(i))
+    argv = sys.argv[1:]
+    num_arg = len(argv)
+
+
+    if num_arg == 0:
+        '''
+            Prints 0 argument if length of argument is zero
+        '''
+        print("0 argument" + ("" if num_arg == 1 else "s") + ".")
+
     else:
-        print("{} arguments:".format(i))
+        '''
+            Prints the length of argument and returns the 
+            argument passed.
+        '''
+        print(f"{num_arg} argument" + ("" if num_arg == 1 else "s") + ":")
 
-    if i >= 1:
-        i = 0
-        for arg in sys.argv:
-            if i != 0:
-                print("{}: {}".format(i, arg))
-            i += 1
+        for i, arg in enumerate(argv, start=1):
+            print(f"{i}: {arg}")
