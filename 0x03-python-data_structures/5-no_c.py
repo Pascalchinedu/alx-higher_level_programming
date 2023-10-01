@@ -1,14 +1,19 @@
 #!/usr/bin/python3
+
+# A function that removes all characters c and C from a string
 def no_c(my_string):
-    length = len(my_string)
 
-    j = 0
+    result = []
 
-    new_string = my_string[:]
+    for word in my_string:
+        # checks if string contains letter c or C
+        if word != 'c' and word != 'C':
+            # appends letters without c and C
+            result.append(word)
+    
+    return ''.join(result)
 
-    for i in range(length):
-        if (my_string[i] == 'c' or my_string[i] == 'C'):
-            new_string = new_string[:(i - j)] + my_string[(i + 1):]
-            j += 1
-
-    return (new_string)
+# Example usage
+print(no_c("Best School")) # should print "Best Shool"
+print(no_c("Chicago")) # should print "hiago"
+print(no_c("C is fun!")) # should print "is fun"
