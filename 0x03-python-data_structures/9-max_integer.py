@@ -1,14 +1,21 @@
 #!/usr/bin/python3
+
+# A function that finds the biggest integer of a list.
 def max_integer(my_list=[]):
-    length = len(my_list)
 
-    if length == 0:
-        return (None)
+    largest_number = my_list[0]
 
-    max_int = my_list[0]
+    if not my_list:
+        return largest_number
+    
+    for number in my_list[1:]:
+        if number > largest_number: 
+            largest_number = number
+    
+    return largest_number
 
-    for i in range(1, length):
-        if my_list[i] > max_int:
-            max_int = my_list[i]
 
-    return (max_int)
+# Example usage
+my_list = [23, 436, 35, 26, 476, 387]
+max_value = max_integer(my_list) # should return 476
+print("Max: {}".format(max_value))
