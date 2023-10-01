@@ -1,5 +1,4 @@
 import pickle
-import sys
 '''
 Program reads content from the game.dat file and creates a new file copying only 
 those records from the game.dat where the game is "Basket Ball".
@@ -52,7 +51,8 @@ def main():
     while True:
         set_data()
         newRecord = input("Do you want to enter a new record? y/n: ")
-        if newRecord in 'Nn':
+        print()
+        if newRecord == 'n':
             break
 
     game_name = input("Enter Game Name: ")
