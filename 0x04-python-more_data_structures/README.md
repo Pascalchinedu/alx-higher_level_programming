@@ -6,7 +6,7 @@ This directory contains tasks on python data structure involving set, list, tupl
 
 Below are the resources used in accomplishing this tasks.
 - [Data Structure](https://intranet.alxswe.com/rltoken/GmgoSUtBbHBW8suWkws51g)
--[Lambda, filter, reduce and map](https://intranet.alxswe.com/rltoken/53f4kKVT0-jyzrJstOSJWg)
+- [Lambda, filter, reduce and map](https://intranet.alxswe.com/rltoken/53f4kKVT0-jyzrJstOSJWg)
 - [Learn to Program 12 Lambda Map Filter Reduce](https://intranet.alxswe.com/rltoken/v9eyFryhkYmxDI13iTx2VA)
 
 # Table of Content
